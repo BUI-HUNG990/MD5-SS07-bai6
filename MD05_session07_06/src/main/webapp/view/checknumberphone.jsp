@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
@@ -16,14 +15,12 @@
             font-family: 'Segoe UI', sans-serif;
         }
 
-        /* Tiêu đề */
         #container h1 {
             text-align: center;
             margin-bottom: 20px;
             color: #333;
         }
 
-        /* Nhãn */
         #container label {
             display: block;
             margin-top: 15px;
@@ -31,10 +28,9 @@
             color: #555;
         }
 
-        /* Input fields */
         #container input[type="text"],
         #container input[type="email"],
-        #container input[type="tel"]{
+        #container input[type="tel"] {
             width: 100%;
             padding: 10px 12px;
             margin-top: 5px;
@@ -49,37 +45,47 @@
             outline: none;
         }
 
-        /* Nút submit và reset */
-        #submit,
-        #cancel {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        {
+            margin-top: 20px
+        ;
+            padding: 10px 20px
+        ;
+            border: none
+        ;
+            border-radius: 6px
+        ;
+            font-size: 16px
+        ;
+            cursor: pointer
+        ;
+            transition: background-color 0.3s ease
+        ;
+        }
+        {
+            background-color: #007bff
+        ;
+            color: white
+        ;
+            margin-right: 10px
+        ;
         }
 
-        #submit {
-            background-color: #007bff;
-            color: white;
-            margin-right: 10px;
-        }
-
-        #submit:hover {
+        :hover {
             background-color: #0056b3;
         }
 
-        #cancel {
-            background-color: #6c757d;
-            color: white;
+        {
+            background-color: #6c757d
+        ;
+            color: white
+        ;
         }
 
-        #cancel:hover {
+        :hover {
             background-color: #5a6268;
         }
-        p{
+
+        p {
             color: #e31212;
         }
     </style>
@@ -88,9 +94,9 @@
 <div id="container">
     <h1>Check Phone Number</h1>
     <p>${message}</p>
-    <form:form modelAttribute="userForm"  method="POST" action="/phoneNumber">
-        <label for="phone" >Number </label>
-        <form:input type="text" name="phone" id="phone" value=""  path="phoneNumber"/><br>
+    <form:form modelAttribute="userForm" method="POST" action="/phoneNumber">
+        <label for="phone">Number </label>
+        <form:input type="text" name="phone" id="phone" value="" path="phoneNumber"/><br>
         <form:errors path="phoneNumber" cssStyle="font-size: 10px;color: #e31212"/><br>
 
         <form:button type="submit" id="submit">Kiểm tra</form:button>
